@@ -19,6 +19,7 @@ import News from './routes/newsRoute.js'
 import Testmonial from './routes/testomonialRoute.js'
 import Auth from './routes/authRoute.js'
 import Image from './routes/imageRoute.js'
+import Category from './routes/categoryRoute.js';
 
 
 
@@ -58,6 +59,7 @@ app.use("/api/v1/gallery",Gallery);
 app.use("/api/v1/news",News);
 app.use("/api/v1/testmonial",Testmonial);
 app.use("/api/v1/image",Image);
+app.use("/api/v1/category",Category);
 
 
 
@@ -71,4 +73,4 @@ app.get("/",(req,res)=>{
 
 const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => console.log(colors.bgCyan.white(`server is running at http://localhost${PORT} ${process.env.WEBNAME}`)));
+app.listen(PORT, () => console.log(colors.bgCyan.white(`server is running at http://localhost:${PORT} ${process.env.WEBNAME}`)));
