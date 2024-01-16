@@ -13,7 +13,7 @@ export const registercontroller = async(req,res)=>{
         // validations
     if(!name || !email || !password || !answer || role){
     return  res.status(200).send({
-        success:false,
+        success:true,
         message:"Please fill all fields"
       })
     }
